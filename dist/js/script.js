@@ -27,3 +27,11 @@ hamburger.addEventListener('click', () => {
 
 // click on html element navbar menu in mobile phone gone
 window.addEventListener('click', e => {if (e.target != hamburger && e.target != navMenu) {hamburger.classList.remove('hamburger-active');navMenu.classList.add('hidden');}})
+
+// dark mode toggle
+const darkToggle = document.querySelector('#dark-toggle');
+const html = document.querySelector('html');
+
+darkToggle.addEventListener('click', () => {
+    (darkToggle.checked) ? html.classList.add('dark') : html.classList.remove('dark');
+})
